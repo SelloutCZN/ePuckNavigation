@@ -1380,3 +1380,524 @@ java.lang.Exception: Project 'Project' is not open.
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-11-03 10:36:37.929
 !MESSAGE Indexed 'Project' (1 sources, 44 headers) in 0.11 sec: 2,263 declarations; 3,025 references; 14 unresolved inclusions; 1 syntax errors; 6 unresolved names (0.11%)
+!SESSION 2025-11-11 11:10:53.979 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_422
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -data Workspace
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-11-11 11:10:55.443
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2025-11-11 11:30:40.654 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_422
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -data Workspace
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:37:52.031
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:37:52.033
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:37:52.033
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 0
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:38:02.559
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:38:02.559
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:38:02.560
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 0
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:38:20.682
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+java.lang.Exception: Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+Contains: Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+java.lang.Exception: Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:38:20.683
+!MESSAGE Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:38:20.683
+!MESSAGE Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+!STACK 0
+java.lang.Exception: Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:38:20.683
+!MESSAGE Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:38:20.683
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!STACK 0
+java.lang.Exception: Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SESSION 2025-11-11 11:38:50.802 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_422
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -data Workspace
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:39:03.608
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+java.lang.Exception: Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+Contains: Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+java.lang.Exception: Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:39:03.608
+!MESSAGE Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:39:03.608
+!MESSAGE Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+!STACK 0
+java.lang.Exception: Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:39:03.608
+!MESSAGE Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:39:03.608
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!STACK 0
+java.lang.Exception: Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:40:02.624
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:40:02.624
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:40:02.624
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 0
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-11-11 11:40:33.159
+!MESSAGE Indexed 'Project' (1 sources, 1 headers) in 0.065 sec: 100 declarations; 385 references; 19 unresolved inclusions; 0 syntax errors; 16 unresolved names (3.2%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:42:38.767
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:42:38.767
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:42:38.767
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 0
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:42:45.348
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:42:45.349
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:42:45.349
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Attaching to Remote target failed
+!STACK 0
+java.lang.Exception: Attaching to Remote target failed
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2025-11-11 11:43:13.825
+!MESSAGE Error in final launch sequence:
+
+Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:112)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:242)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:807)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:718)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+java.lang.Exception: Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+Contains: Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target.
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+Contains: Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+java.lang.Exception: Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10004 2025-11-11 11:43:13.827
+!MESSAGE Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+ ,Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target. ,Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:43:13.827
+!MESSAGE Failed to execute MI command:
+target extended-remote/dev/ttyACM0
+Error message from debugger back end:
+Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+!STACK 0
+java.lang.Exception: Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=400;qXfer:memory-map:read+;qXfer:features:read+
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:43:13.827
+!MESSAGE Failed to execute MI command:
+monitor swdp_scan
+Error message from debugger back end:
+"monitor" command not supported by this target.
+!STACK 0
+java.lang.Exception: "monitor" command not supported by this target.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)
+!SUBENTRY 2 org.eclipse.cdt.dsf.gdb 4 10004 2025-11-11 11:43:13.827
+!MESSAGE Failed to execute MI command:
+attach 1
+Error message from debugger back end:
+Don't know how to attach.  Try "help target".
+!STACK 0
+java.lang.Exception: Don't know how to attach.  Try "help target".
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:993)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:822)

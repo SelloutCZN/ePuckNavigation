@@ -49,10 +49,10 @@ static void set_rgb_task1(AvoidState s)
 }
 static void update_ring_leds_task1(int F,int L,int R)
 {
-    set_led(LED1, (F > T1_THR_FRONT) ? 1 : 0); // Front
-    set_led(LED3, (R > T1_THR_SIDE)  ? 1 : 0); // Right
-    set_led(LED7, (L > T1_THR_SIDE)  ? 1 : 0); // Left
-    set_led(LED5, 0);                          // Back unused
+    set_led(LED1, (F > T1_THR_FRONT) ? 1 : 0);
+    set_led(LED3, (R > T1_THR_SIDE)  ? 1 : 0);
+    set_led(LED7, (L > T1_THR_SIDE)  ? 1 : 0);
+    set_led(LED5, 0);
 }
 void run_obstacle_avoidance(void)
 {
@@ -86,7 +86,7 @@ void run_obstacle_avoidance(void)
         case PIVOT_LEFT:
         case PIVOT_RIGHT:
             left_motor_set_speed((state==PIVOT_LEFT)?-T1_PIVOT_SPEED: T1_PIVOT_SPEED);
-            right_motor_set_speed((state==PIVOT_LEFT)? T1_PIVOT_SPEED:-T1_PIVOT_SPEED);
+            right_motor_set_speed((state==PIVOT_LEFT)?  T1_PIVOT_SPEED:-T1_PIVOT_SPEED);
             if(F<T1_REL_FRONT){
                 if(hold_counter>0) hold_counter--;
                 else{ state=DRIVE; set_rgb_task1(state); }
@@ -105,16 +105,15 @@ void run_obstacle_avoidance(void)
 // ============================================================================
 typedef enum { SEARCH=0, TURN, APPROACH, STOP, BACKOFF } ChaseState;
 
-const uint16_t SEARCH_RANGE_THR = 75;
-const uint16_t DESIRED_MIN_MM   = 45;
-const uint16_t DESIRED_MAX_MM   = 65;
-const uint16_t BACKOFF_DIST_MM  = 40;
-const uint16_t SAFE_DIST_MM     = 50;
+const uint16_t SEARCH_RANGE_THR = 50;
+const uint16_t DESIRED_MIN_MM   = 30;
+const uint16_t DESIRED_MAX_MM   = 45;
+const uint16_t BACKOFF_DIST_MM  = 25;
+const uint16_t SAFE_DIST_MM     = 35;
 
-const int DETECT_THR     = 300;
-const int CENTER_THR     = 150;
-const int LOST_THR       = 200;
-const int TRACK_DIFF_THR = 120;
+const uint16_t VIS_MAX_MM       = 350;
+const int DETECT_THR            = 300;
+const int LOST_THR              = 200;
 
 const int SEARCH_SPEED   = 250;
 const int TURN_SPEED     = 450;
@@ -122,6 +121,10 @@ const int APPROACH_FAST  = 700;
 const int APPROACH_SLOW  = 250;
 const int BACKOFF_SPEED  = -300;
 const int TRACK_SPEED    = 250;
+
+const int FRONT_SOFT_THR = 700;
+const int FRONT_CRIT_THR = 900;
+const int CENTER_MARGIN  = 120;
 
 static inline int front_read(int p0,int p7,int p1,int p6){return (45*p7+45*p0+5*p6+5*p1)/100;}
 static inline int left_read (int p6,int p5,int p7){return (60*p6+30*p5+10*p7)/100;}
@@ -154,47 +157,93 @@ void run_object_chasing(void)
         int F=front_read(p[0],p[7],p[1],p[6]);
         int L=left_read(p[6],p[5],p[7]);
         int R=right_read(p[1],p[2],p[0]);
-        int B=back_read(p[3],p[4]);
+        int B=back_read(p[3],p[4]); (void)B;
         int max_idx=0; for(int i=1;i<8;i++) if(p[i]>p[max_idx]) max_idx=i;
         int max_val=p[max_idx];
+
+        int target_visible = (dist_mm < VIS_MAX_MM);
+        int prox_present   = (max_val > DETECT_THR);
+        int front_right = (p[0] + p[1] + p[2]) / 3;
+        int front_left  = (p[5] + p[6] + p[7]) / 3;
+        int front_any   = (front_right > front_left ? front_right : front_left);
 
         switch(state){
         case SEARCH:
             left_motor_set_speed( SEARCH_SPEED);
             right_motor_set_speed(-SEARCH_SPEED);
-            if(dist_mm<SEARCH_RANGE_THR || max_val>DETECT_THR){state=TURN; set_led_task2(state);}
+            if(target_visible || prox_present){
+                state = TURN; set_led_task2(state);
+            }
             break;
+
         case TURN:
-            if(dist_mm>=SEARCH_RANGE_THR && max_val<DETECT_THR){state=SEARCH; set_led_task2(state); break;}
-            if(max_idx==3||max_idx==4){left_motor_set_speed( TURN_SPEED); right_motor_set_speed(-TURN_SPEED);}
-            else if(max_idx==5||max_idx==6||max_idx==7){left_motor_set_speed(-TURN_SPEED); right_motor_set_speed( TURN_SPEED);}
-            else if(max_idx==0||max_idx==1||max_idx==2){left_motor_set_speed( TURN_SPEED); right_motor_set_speed(-TURN_SPEED);}
-            if(max_idx==0||max_idx==7){left_motor_set_speed(0); right_motor_set_speed(0); state=APPROACH; set_led_task2(state);}
+            if(!target_visible && max_val < LOST_THR){
+                state = SEARCH; set_led_task2(state); break;
+            }
+            if(max_idx==3||max_idx==4){ left_motor_set_speed( TURN_SPEED); right_motor_set_speed(-TURN_SPEED); }
+            else if(max_idx==5||max_idx==6||max_idx==7){ left_motor_set_speed(-TURN_SPEED); right_motor_set_speed( TURN_SPEED); }
+            else if(max_idx==0||max_idx==1||max_idx==2){ left_motor_set_speed( TURN_SPEED); right_motor_set_speed(-TURN_SPEED); }
+
+            if((max_idx==0||max_idx==7) && target_visible){
+                left_motor_set_speed(0); right_motor_set_speed(0);
+                state = APPROACH; set_led_task2(state);
+            }
             break;
+
         case APPROACH:
-            if(dist_mm<=DESIRED_MIN_MM){left_motor_set_speed(0); right_motor_set_speed(0); state=STOP; set_led_task2(state); break;}
-            if(dist_mm>DESIRED_MAX_MM && dist_mm<1200){
-                int sp=APPROACH_SLOW+(dist_mm-DESIRED_MAX_MM)*(APPROACH_FAST-APPROACH_SLOW)/(SEARCH_RANGE_THR-DESIRED_MAX_MM);
-                if(sp>APPROACH_FAST)sp=APPROACH_FAST; if(sp<APPROACH_SLOW)sp=APPROACH_SLOW;
-                left_motor_set_speed(sp); right_motor_set_speed(sp);
-            }else{ left_motor_set_speed(0); right_motor_set_speed(0); state=STOP; set_led_task2(state);}
-            if(dist_mm>=1200 && max_val<LOST_THR){state=SEARCH; set_led_task2(state);}
+            if(!target_visible && max_val < LOST_THR){
+                left_motor_set_speed(0); right_motor_set_speed(0);
+                state = SEARCH; set_led_task2(state); break;
+            }
+            if(front_any >= FRONT_CRIT_THR){ state = BACKOFF; set_led_task2(state); break; }
+            if(front_any >= FRONT_SOFT_THR){ left_motor_set_speed(0); right_motor_set_speed(0); state = TURN; set_led_task2(state); break; }
+            if(dist_mm <= DESIRED_MIN_MM){ left_motor_set_speed(0); right_motor_set_speed(0); state = STOP; set_led_task2(state); break; }
+
+            // new pivot-then-go logic
+            {
+                int diff = (R - L);
+                if(abs(diff) > CENTER_MARGIN){
+                    if(diff > 0){ left_motor_set_speed( TURN_SPEED); right_motor_set_speed(-TURN_SPEED); }
+                    else{ left_motor_set_speed(-TURN_SPEED); right_motor_set_speed( TURN_SPEED); }
+                    break;
+                }
+            }
+
+            if(dist_mm > DESIRED_MAX_MM && target_visible){
+                int denom = (int)SEARCH_RANGE_THR - (int)DESIRED_MAX_MM;
+                if(denom < 1) denom = 1;
+                int sp = APPROACH_SLOW +
+                        ((int)dist_mm - (int)DESIRED_MAX_MM) * (APPROACH_FAST - APPROACH_SLOW) / denom;
+                if(sp > APPROACH_FAST) sp = APPROACH_FAST;
+                if(sp < APPROACH_SLOW) sp = APPROACH_SLOW;
+                left_motor_set_speed(sp);
+                right_motor_set_speed(sp);
+            } else {
+                left_motor_set_speed(0); right_motor_set_speed(0);
+                state = STOP; set_led_task2(state);
+            }
             break;
+
         case STOP:
             left_motor_set_speed(0); right_motor_set_speed(0);
-            if(max_val>DETECT_THR){
-                if(max_idx==5||max_idx==6||max_idx==7){left_motor_set_speed(-TRACK_SPEED); right_motor_set_speed( TRACK_SPEED);}
-                else if(max_idx==0||max_idx==1||max_idx==2){left_motor_set_speed( TRACK_SPEED); right_motor_set_speed(-TRACK_SPEED);}
-                else if(max_idx==3||max_idx==4){left_motor_set_speed( TURN_SPEED); right_motor_set_speed(-TURN_SPEED);}
-                else{left_motor_set_speed(0); right_motor_set_speed(0);}
+            if(!target_visible && max_val < LOST_THR){ state = SEARCH; set_led_task2(state); break; }
+            if(target_visible && dist_mm < BACKOFF_DIST_MM){ state = BACKOFF; set_led_task2(state); break; }
+            if(target_visible && dist_mm > DESIRED_MAX_MM){ state = APPROACH; set_led_task2(state); break; }
+
+            {
+                int TRACK_DIFF_THR = 120;
+                int diffLR = L - R;
+                if(abs(diffLR) > TRACK_DIFF_THR && max_val > DETECT_THR){
+                    if(diffLR > 0){ left_motor_set_speed(-TRACK_SPEED); right_motor_set_speed( TRACK_SPEED); }
+                    else{ left_motor_set_speed( TRACK_SPEED); right_motor_set_speed(-TRACK_SPEED); }
+                }else{ left_motor_set_speed(0); right_motor_set_speed(0); }
             }
-            if(dist_mm>DESIRED_MAX_MM && dist_mm<1200){state=APPROACH; set_led_task2(state);}
-            if(dist_mm<BACKOFF_DIST_MM){state=BACKOFF; set_led_task2(state);}
-            if(dist_mm>=1200 && max_val<LOST_THR){state=SEARCH; set_led_task2(state);}
             break;
+
         case BACKOFF:
             left_motor_set_speed(BACKOFF_SPEED); right_motor_set_speed(BACKOFF_SPEED);
-            if(dist_mm>SAFE_DIST_MM){left_motor_set_speed(0); right_motor_set_speed(0); state=STOP; set_led_task2(state);}
+            if(dist_mm > SAFE_DIST_MM){ left_motor_set_speed(0); right_motor_set_speed(0); state = STOP; set_led_task2(state); }
+            if(!target_visible && max_val < LOST_THR){ left_motor_set_speed(0); right_motor_set_speed(0); state = SEARCH; set_led_task2(state); }
             break;
         }
         chThdSleepMilliseconds(LOOP_DT_MS);
@@ -235,4 +284,4 @@ int main(void)
 
 #define STACK_CHK_GUARD 0xe2dee396
 uintptr_t __stack_chk_guard=STACK_CHK_GUARD;
-void __stack_chk_fail(void){ chSysHalt("Stack smashing detected"); }
+void __stack_chk_fail(void){chSysHalt("Stack smashing detected");}

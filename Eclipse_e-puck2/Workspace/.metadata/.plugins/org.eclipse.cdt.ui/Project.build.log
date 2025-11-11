@@ -1,6 +1,27 @@
-10:50:24 **** Incremental Build of configuration Default for project Project ****
+12:19:28 **** Incremental Build of configuration Default for project Project ****
 make all 
-make: Nothing to be done for 'all'.
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:157:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
 
-10:50:25 Build Finished. 0 errors, 0 warnings. (took 740ms)
+   text	   data	    bss	    dec	    hex	filename
+  87396	   3796	  19492	 110684	  1b05c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+
+12:19:29 Build Finished. 0 errors, 2 warnings. (took 828ms)
 

@@ -768,3 +768,279 @@ make: Nothing to be done for 'all'.
 10:50:24 **** Incremental Build of configuration Default for project Project ****
 make all 
 make: Nothing to be done for 'all'.
+11:20:48 **** Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:26:37 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:27:20 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:28:39 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:29:31 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:34:39 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:36:05 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:37:50 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:38:01 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:38:19 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:39:02 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:40:01 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:42:37 **** Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:42:44 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:43:12 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:43:39 **** Incremental Build of configuration Default for project Project ****
+make all 
+make: Nothing to be done for 'all'.
+11:44:43 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:155:13: warning: unused variable 'B' [-Wunused-variable]
+         int B=back_read(p[3],p[4]);
+             ^
+main.c:152:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87332	   3796	  19492	 110620	  1b01c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+11:50:27 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:160:13: warning: unused variable 'B' [-Wunused-variable]
+         int B=back_read(p[3],p[4]);
+             ^
+main.c:157:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87524	   3796	  19492	 110812	  1b0dc	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+11:53:46 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:178:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(sp>APPROACH_FAST)sp=APPROACH_FAST; if(sp<APPROACH_SLOW)sp=APPROACH_SLOW;
+                 ^~
+main.c:178:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(sp>APPROACH_FAST)sp=APPROACH_FAST; if(sp<APPROACH_SLOW)sp=APPROACH_SLOW;
+                                                       ^~
+main.c:157:13: warning: unused variable 'B' [-Wunused-variable]
+         int B=back_read(p[3],p[4]);
+             ^
+main.c:156:13: warning: unused variable 'R' [-Wunused-variable]
+         int R=right_read(p[1],p[2],p[0]);
+             ^
+main.c:155:13: warning: unused variable 'L' [-Wunused-variable]
+         int L=left_read(p[6],p[5],p[7]);
+             ^
+main.c:154:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87188	   3796	  19492	 110476	  1af8c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+11:56:46 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:178:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(sp>APPROACH_FAST)sp=APPROACH_FAST; if(sp<APPROACH_SLOW)sp=APPROACH_SLOW;
+                 ^~
+main.c:178:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(sp>APPROACH_FAST)sp=APPROACH_FAST; if(sp<APPROACH_SLOW)sp=APPROACH_SLOW;
+                                                       ^~
+main.c:157:13: warning: unused variable 'B' [-Wunused-variable]
+         int B=back_read(p[3],p[4]);
+             ^
+main.c:156:13: warning: unused variable 'R' [-Wunused-variable]
+         int R=right_read(p[1],p[2],p[0]);
+             ^
+main.c:155:13: warning: unused variable 'L' [-Wunused-variable]
+         int L=left_read(p[6],p[5],p[7]);
+             ^
+main.c:154:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87172	   3796	  19492	 110460	  1af7c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+12:07:38 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:160:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87444	   3796	  19492	 110732	  1b08c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+12:10:26 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:160:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87444	   3796	  19492	 110732	  1b08c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+12:17:48 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:157:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87396	   3796	  19492	 110684	  1b05c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
+12:19:28 **** Incremental Build of configuration Default for project Project ****
+make all 
+[1;34mCompiling main.c[0m
+main.c: In function 'run_obstacle_avoidance':
+main.c:82:17: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                 ^~
+main.c:82:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+                 if(ls>1000)ls=1000;if(rs>1000)rs=1000;if(ls<0)ls=0;if(rs<0)rs=0;
+                                    ^~
+main.c: In function 'run_object_chasing':
+main.c:157:13: warning: unused variable 'F' [-Wunused-variable]
+         int F=front_read(p[0],p[7],p[1],p[6]);
+             ^
+[1;34mLinking build/Project_template.elf[0m
+[1;34mCreating build/Project_template.hex[0m
+[1;34mCreating build/Project_template.bin[0m
+[1;34mCreating build/Project_template.dmp[0m
+
+   text	   data	    bss	    dec	    hex	filename
+  87396	   3796	  19492	 110684	  1b05c	build/Project_template.elf
+[1;34mCreating build/Project_template.list[0m
+
+[1;34mDone[0m
