@@ -23,9 +23,7 @@ messagebus_t bus;
 MUTEX_DECL(bus_lock);
 CONDVAR_DECL(bus_condvar);
 
-// ============================================================================
-//                                TASK 1 (AVOIDANCE)
-// ============================================================================
+// ---  TASK 1 (AVOIDANCE) --- //
 typedef enum { DRIVE = 0, PIVOT_LEFT, PIVOT_RIGHT } AvoidState;
 
 const int T1_THR_FRONT   = 700;
@@ -100,9 +98,7 @@ void run_obstacle_avoidance(void)
     right_motor_set_speed(0);
 }
 
-// ============================================================================
-//                                TASK 2 (CHASE)
-// ============================================================================
+// ---  TASK 2 (CHASE) --- //
 typedef enum { SEARCH=0, TURN, APPROACH, STOP, BACKOFF } ChaseState;
 
 const uint16_t SEARCH_RANGE_THR = 50;
@@ -253,9 +249,7 @@ void run_object_chasing(void)
     right_motor_set_speed(0);
 }
 
-// ============================================================================
-//                                 MAIN
-// ============================================================================
+// ---  MAIN LOOP --- //
 int main(void)
 {
     halInit(); chSysInit(); mpu_init();
