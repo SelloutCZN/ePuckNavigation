@@ -5,5 +5,7 @@ This repository contains the relevant code and files used to control an e-puck r
 
 This work was completed as part of project work in the ELE466 module at the University of Sheffield (2025-26). 
 Source code may be found under Project/main.c 
-
-Documentation on the e-puck robot can be found here: https://e-puck.gctronic.com/
+______________________
+**NOTE:**
+The E-Puck is an miniature mobile robot developed for educational purposes by the Swiss Federal Technology Institute of Lausanne (EPFL).
+Its documentation on the e-puck robot can be found here: https://e-puck.gctronic.com/
