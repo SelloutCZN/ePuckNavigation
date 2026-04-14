@@ -8,4 +8,4 @@ Source code may be found under Project/main.c
 ______________________
 **NOTE:**
 The E-Puck is an miniature mobile robot developed for educational purposes by the Swiss Federal Technology Institute of Lausanne (EPFL).
-Its documentation on the e-puck robot can be found here: https://e-puck.gctronic.com/
+Its documentation can be found here: https://e-puck.gctronic.com/
